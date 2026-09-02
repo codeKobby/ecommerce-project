@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import "./header.css"
 import "./HomePage.css"
 
@@ -6,10 +7,10 @@ export function HomePage() {
     <>
       <div className='header'>
         <div className='left-section'>
-          <a href='index.html' className='header-link'>
+          <Link to='/' className='header-link'>
             <img className='logo' src='images/logo-white.png' />
             <img className='mobile-logo' src='images/mobile-logo-white.png' />
-          </a>
+          </Link>
         </div>
 
         <div className='middle-section'>
@@ -25,11 +26,11 @@ export function HomePage() {
             <span className='orders-text'>Orders</span>
           </a>
 
-          <a className='cart-link header-link' href='checkout.html'>
+          <Link className='cart-link header-link' to='/checkout'>
             <img className='cart-icon' src='images/icons/cart-icon.png' />
             <div className='cart-quantity'>3</div>
             <div className='cart-text'>Cart</div>
-          </a>
+          </Link>
         </div>
       </div>
 
