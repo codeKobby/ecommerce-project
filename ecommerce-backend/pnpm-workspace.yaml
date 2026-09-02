@@ -1,0 +1,2 @@
+patchedDependencies:
+  sql.js-as-sqlite3@0.2.1: patches/sql.js-as-sqlite3@0.2.1.patch
