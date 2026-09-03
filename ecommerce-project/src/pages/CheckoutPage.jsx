@@ -6,7 +6,7 @@ import checkoutLock from "../assets/images/icons/checkout-lock-icon.png";
 import "./CheckoutPage.css";
 import "./checkout-header.css";
 
-export function CheckoutPage() {
+export function CheckoutPage({ cart }) {
   return (
     <>
       <div className='checkout-header'>
