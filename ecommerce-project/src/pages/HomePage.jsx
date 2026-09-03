@@ -8,16 +8,20 @@ import checkmark from "../assets/images/icons/checkmark.png";
 
 export function HomePage() {
   const [products, setProducts] = useState([]);
+  const [cart,setCart] = useState([]);
 
   useEffect(() => {
     axios.get("http://localhost:3000/api/products").then((response) => {
       setProducts(response.data);
     });
+    axios.get("http://localhost:3000/api/cart-items").then((response) => {
+      setCart(response.data);
+    });
   }, []);
 
   return (
     <>
-      <Header />
+      <Header cart={cart} />
 
       <div className='home-page'>
         <div className='products-grid'>
