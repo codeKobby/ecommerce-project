@@ -1,10 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-import { Header } from "../components/Header";
+import { Header } from "../../components/Header";
 
 import "./HomePage.css";
-import checkmark from "../assets/images/icons/checkmark.png";
+import checkmark from "../../assets/images/icons/checkmark.png";
 
 export function HomePage({ cart }) {
   const [products, setProducts] = useState([]);
@@ -13,7 +13,6 @@ export function HomePage({ cart }) {
     axios.get("api/products").then((response) => {
       setProducts(response.data);
     });
-   
   }, []);
 
   return (
